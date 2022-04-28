@@ -19,6 +19,11 @@ describe("test for StudentService Class", ()=> {
         expect(students.length).toBe(0);
     });
 
-
+    //endpoint /v1/students/with-certification/show/email
+    test("for getStudentsWithCertification", ()=> {
+        let students = Database.studentsAll(db);
+        students = StudentService.getStudentsWithCertification(students);
+        expect(students.length).toBe(29);
+    })
 
 });
