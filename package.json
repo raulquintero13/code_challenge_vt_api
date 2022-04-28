@@ -1,0 +1,30 @@
+{
+  "name": "code_challenge_vt_api",
+  "version": "1.0.0",
+  "description": "Visual Partner Ship - Cursos",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/jest",
+    "start": "node ./lib/server.js",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulquintero13/code_challenge_vt_api.git"
+  },
+  "keywords": [],
+  "author": "Raul Quintero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raulquintero13/code_challenge_vt_api/issues"
+  },
+  "homepage": "https://github.com/raulquintero13/code_challenge_vt_api#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "jest": "^28.0.2"
+  }
+}
