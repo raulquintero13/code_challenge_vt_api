@@ -26,4 +26,13 @@ describe("test for StudentService Class", ()=> {
         expect(students.length).toBe(29);
     })
 
+    //endpoint /v1/students/score-greater-than/show/email
+    test("for getStudentsWithCertification", ()=> {
+        let students = Database.studentsAll(db);
+        students = StudentService.getStudentsScoreGreaterThan(students);
+        expect(students.length).toBe(27);
+    })
+
+    
+
 });
