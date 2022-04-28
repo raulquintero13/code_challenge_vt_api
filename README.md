@@ -7,15 +7,23 @@ endpoints
 
 | Endpoint | Request | Response |
 |---|---|---|
-| `localhost:3000/v1/students` | `localhost:3000/students` | `[{"id": "6264d5d89f1df827eb84bb23","name": "Warren","email": "Todd@visualpartnership.xyz","credits": 508,"enrollments": ["Visual Thinking Intermedio","Visual Thinking Avanzado"], ...]` |
-| `localhost:3000/v1/students/with-certification/show/email` | `localhost:3000/v1/students/with-certification/show/email` | `[{email: "Todd@visualpartnership.xyz"}, ....]` |
-| `localhost:3000/v1/score-greater-than/:score` | `localhost:3000/v1/score_greater_than` | `[{"id": "6264d5d89f1df827eb84bb23","name": "Warren","email": "Todd@visualpartnership.xyz","credits": 508,"enrollments": ["Visual Thinking Intermedio","Visual Thinking Avanzado"], ...]` |
+| `localhost:3000/v1/students` | `localhost:3000/students` | `{"success": true, "message": "", "data":{ "qty": 51, "students": [{"id": "6264d5d89f1df827eb84bb23","name": "Warren","email": "Todd@visualpartnership.xyz","credits": 508,"enrollments": ["Visual Thinking Intermedio","Visual Thinking Avanzado"], ...]}` |
+| `localhost:3000/v1/students/with-certification/show/email` | `localhost:3000/v1/students/with-certification/show/email` | `["success": true, "message": "", "data": {"qty": 11, "data":{[{email: "Todd@visualpartnership.xyz"}, ....]}` |
+| `localhost:3000/v1/score-greater-than/:score` | `localhost:3000/v1/score_greater_than` | `{"success": true, "message": "", "data":{[{"id": "6264d5d89f1df827eb84bb23","name": "Warren","email": "Todd@visualpartnership.xyz","credits": 508,"enrollments": ["Visual Thinking Intermedio","Visual Thinking Avanzado"], ...]}` |
 
 nota:
 nos apegaremos al estricto caso que se nos plantea, sin parametros en el caso de certificacion y el score,
 ya que es posible que el cliente, no quiera que se tenga acceso a otra informacion mas que a la que se especifica,
 en dado caso que posteriormente el cliente decida acceder a mas informacion, se replanteara la solucion
 
+sugerimos para la respuesta de cada peticion, el formato
+```
+{
+    "success": Bool,
+    "message": String,
+    "data": array
+}
+```
 
 Instalacion
 npm install
