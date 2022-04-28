@@ -25,6 +25,17 @@ sugerimos para la respuesta de cada peticion, el formato
 }
 ```
 
+# Flujo 
+
+```mermaid
+graph TD;
+    Reader-->Database;
+    Database-->StudentController;
+    StudentService-->StudentController
+    StudentController-->Server
+```
+
+
 Instalacion
 npm install
 
