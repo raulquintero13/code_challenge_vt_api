@@ -9,7 +9,6 @@ describe("test for StudentService Class", ()=> {
     // endpoint /v1/students
     test("test for getStudents()", ()=> {
         let students = Database.studentsAll(db);
-        console.log(students);
         students = StudentService.getStudents(students);
         expect(students.length).toBe(51);
     });
