@@ -29,23 +29,23 @@ sugerimos para la respuesta de cada peticion, el formato
 
 ```mermaid
 graph TD;
-    Reader-->Database;
-    Database-->StudentController;
-    StudentService-->StudentController
-    StudentController-->Server
+    Reader-->Database-ORM;
+    Database-ORM -->StudentModel;
+    StudentModel-->StudentController;
+    StudentService-->StudentController;
+    StudentController-->Server;
 ```
 
-
 Instalacion
-npm install
+-npm install
 
 Dependencias
-npm install --save express
-npm install --save-dev jest
-npm install --save-dev eslint
+- npm install --save express
+- npm install --save-dev jest
+- npm install --save-dev eslint
 
 configuracion de linter
-npm init @eslint/config
+- npm init @eslint/config
 
 ```javascript
 module.exports = {
